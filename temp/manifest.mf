@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: Josleke
+Class-Path: selenium-server-standalone-3.13.0.jar testng-6.8.7.jar 
+Main-Class: WebAppSeleniumTest
