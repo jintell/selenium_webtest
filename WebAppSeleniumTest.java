@@ -20,9 +20,13 @@ public class WebAppSeleniumTest {
 
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		driver.findElement(By.id("about-us")).click();
-
-		
-		System.out.println("Hi, Welcome to Josleke Selenium Test");
+		String pageText = driver.findElement(By.tagName("body")).getText(); 
+	
+		if(pageText.contains("about us") || pageText.contains("About us")) {        	
+			System.out.println("The Website Selenium Test was Successful!!!");
+		}else {
+			System.out.println("The Website Selenium Test failed");
+		}
 		Thread.sleep(1000);
 		driver.quit();
 	}
