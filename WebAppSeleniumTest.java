@@ -11,7 +11,7 @@ public class WebAppSeleniumTest {
 	public static void main(String[] args) throws IOException, InterruptedException  {
 		System.setProperty("webdriver.chrome.driver", "/opt/google/chromedriver/bin/chromedriver");
 		ChromeOptions chromeOptions = new ChromeOptions();
-		//chromeOptions.addArguments("--headless");
+		chromeOptions.addArguments("--headless");
 		chromeOptions.addArguments("--no-sandbox");
 
 		WebDriver driver = new ChromeDriver(chromeOptions);
